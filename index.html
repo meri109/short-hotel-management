@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel managment</title>
+    <!-- links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Heebo:wght@500&family=Marcellus&family=Mulish&family=Quicksand:wght@700&family=Roboto:wght@400;500&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="filter">
+            <div class="filter-item">
+                <select name="floor" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <select name="floor" id="">
+                    <option value="1">Standart</option>
+                    <option value="2">Deluxe</option>
+                    <option value="3">VIP</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label for="used">Used</label><input type="checkbox" name="used" id="used">
+            </div>
+            <div class="filter-item">
+                <label for="min-price"> min. price</label>
+                <input type="text" id="min-price">
+                <label for="max-price"> max. price</label>
+                <input type="text" id="max-price">
+            </div>
+            <div class="filter-item">
+                <button class="new-room-button">New room</button>
+            </div>
+        </section>
+        <section class="info-table">
+            <table class="main-table">
+                <thead>
+                    <th>No</th>
+                    <th>ID</th>
+                    <th>floor</th>
+                    <th>full</th>
+                    <th>Room Type</th>
+                    <th>Last day</th>
+                    <th>Customer</th>
+                    <th>(Price) AZN</th>
+                    <th>Fill</th>
+                    <th>Clear</th>
+                    <th>Delete</th>
+
+                </thead>
+                <tbody class="main-body">
+                    <tr>
+                        <td>1</td>
+                        <td>123</td>
+                        <td>2</td>
+                        <td><i class="fa-solid fa-check"></i></td>
+                        <td>VIP</td>
+                        <td>12.12.12</td>
+                        <td>Leyla Aliyeva</td>
+                        <td>120 AZN</td>
+                        <td><i class="fa-solid fa-circle-plus button"></i></td>
+                        <td><i class="fa-solid fa-circle-minus button"></i></td>
+                        <td><i class="fa-solid fa-trash button"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="general-info">
+            <div>Total rooms: <span></span></div>
+            <div>Empty rooms: <span></span></div>
+            <div>Total income: <span></span></div>
+        </section>
+    </div>
+
+    <div class="backdrop"></div>
+
+    
+    <!-- <div class="modal">
+        <div class="title">aaaaaaaaa</div>
+        <div class="content">aaaaaa</div>
+        <div class="buttons">
+            <button>Save</button>
+            <button class="exit-button">Exit</button>
+        </div>
+        <i class="fa-solid fa-xmark exit"></i>
+    </div> -->
+
+    <div class="modal add-room-modal ">
+        <div class="title">Add room</div>
+        <div class="content">
+            <form action="">
+                <div class="number-div">
+                    <label for="number">Number</label>
+                    <input type="text" id="number" name="number" placeholder="Number">
+                    <small></small>
+                </div>
+                <div class="floor-div">
+                    <label for="floor">Floor</label>
+                    <input type="text" id="floor" name="floor" placeholder="Floor">
+                    <small></small>
+                </div>
+                <div class="type-div">
+                    <label for="type">Type</label>
+                    <select id="type" name="type">
+                        <option value="standart">Standart</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="vip">VIP</option>
+
+                    </select>
+                    <small></small>
+                </div>
+                <div class="price-div">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" name="price" placeholder="Price">
+                    <small></small>
+                </div>
+            </form>
+
+        </div>
+        <div class="buttons">
+            <button class="save">Save</button>
+            <button class="exit-button">Exit</button>
+        </div>
+        <i class="fa-solid fa-xmark exit"></i>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
